@@ -2,7 +2,7 @@ const express = require('express'),
     { json } = require('body-parser'),
     cors = require('cors'),
     massive = require('massive'),
-    { getAll, getOne, create, update, deleteProduct } = require('./products_controller'),
+    { getShelf, getBin, create, update, deleteBin } = require('./shelf-controller'),
     port = process.env.PORT || 3000;
 
 require('dotenv').config();
@@ -16,11 +16,11 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => {
     app.set('db', dbInstance);
 })
 
-app.get('/api/products', getAll);
-app.get('/api/product/:id', getOne);
-app.put('/api/product/:id', update);
-app.post('/api/product', create);
-app.delete('/api/product/:id', deleteProduct);
+app.get('/api/shelf/:id', getShelf); 
+app.get('/api/bin/:id', getBin);
+app.put('/api/bin/:id', update);
+app.post('/api/bin/:id', create); 
+app.delete('/api/bin/:id', deleteBin);//change function 
 
 
 
