@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import './bin.css';
 
 
 class Bin extends Component {
@@ -81,7 +82,7 @@ class Bin extends Component {
                 <div>{this.state.name}
               {this.state.price}
               <button onClick={this.delete}>Delete</button>
-              
+
               <button>Edit</button>
               </div>
                 }

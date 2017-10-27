@@ -1,0 +1,11 @@
+.shelf {
+  color: white;
+  font-size: 28px;
+  border-radius: 10px;
+  margin-left: 150px;
+  font-family: "Open Sans", sans-serif;
+  padding: 40px;
+  margin-top: 30px;
+  width: 40vw;
+  background-color: #d34735 ;
+}
