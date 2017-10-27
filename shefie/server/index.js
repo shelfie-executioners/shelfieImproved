@@ -3,7 +3,7 @@ const express = require('express'),
     cors = require('cors'),
     massive = require('massive'),
     { getShelf, getBin, create, update, deleteBin } = require('./shelf-controller'),
-    port = process.env.PORT || 3000;
+    port = process.env.PORT || 3001;
 
 require('dotenv').config();
 
